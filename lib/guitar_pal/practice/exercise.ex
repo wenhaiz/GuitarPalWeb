@@ -13,6 +13,6 @@ defmodule GuitarPal.Practice.Exercise do
   def changeset(exercise, attrs) do
     exercise
     |> cast(attrs, [:name, :desc])
-    |> validate_required([:name, :desc])
+    |> validate_required([:name,])
   end
 end

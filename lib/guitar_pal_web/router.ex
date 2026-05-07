@@ -21,7 +21,9 @@ defmodule GuitarPalWeb.Router do
   end
 
   scope "/api", GuitarPalWeb do
-    resources "/exercise", ExerciseController
+    pipe_through :api
+    
+    resources "/exercise", ExerciseController, only: [:index]
   end
 
   # Other scopes may use custom stacks.
